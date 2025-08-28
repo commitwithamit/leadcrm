@@ -1,0 +1,230 @@
+@use "global" as *;
+
+// fonts - Exo 2 & poppins
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+// reset
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Exo 2", sans-serif;
+}
+
+a,
+p {
+    font-size: 1rem;
+}
+
+// colors
+$primary : #2D96BC;
+$secondary : #B3FC6A;
+$light: #ffffff;
+$darkBtn: #242424;
+$navLinks: #222222;
+
+.btn {
+    padding: 12px 28px;
+    border-radius: 10px;
+    background-color: transparent;
+    border: none;
+    font-weight: 600;
+    line-height: 28px;
+    @include flex-center;
+    gap: 10px;
+    cursor: pointer;
+
+    &.primary {
+        background-color: $primary;
+        color: $light;
+    }
+
+    &.secondary {
+        background-color: $secondary;
+        color: $darkBtn;
+        font-size: 18px;
+    }
+
+    &.outline {
+        color: $primary;
+        border: 1px solid $primary;
+    }
+
+    &>img {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.site-width {
+    margin: auto;
+    max-width: 1440px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+header {
+    box-shadow: 0 8px 24px 0 #959DA51A;
+
+    &>div {
+        @include flex-center-v;
+        padding: 15px 0;
+
+        .logo {
+            padding: 0;
+
+            img {
+                width: 165px;
+                height: 100%;
+            }
+        }
+
+        div:nth-child(2) {
+            margin-left: auto;
+            @include flex-center-v;
+            gap: 59px;
+            position: relative;
+
+            nav {
+                .mobile-logo-close {
+                    display: none;
+                }
+
+                ul {
+                    @include flex-center-v;
+                    gap: 43px;
+
+                    li {
+                        a {
+                            font-size: 18px;
+                            font-weight: 600;
+                            color: $navLinks;
+
+                            img {
+                                width: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &>div {
+                display: flex;
+                gap: 12px;
+
+                .menu-icon {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1220px) {
+    header {
+        &>div {
+            div:nth-child(2) {
+                gap: 20px;
+
+                nav ul {
+                    gap: 25px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .site-width {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+@media (max-width: 992px) {
+    header {
+        &>div {
+            div:nth-child(2) {
+                nav {
+                    position: fixed;
+                    height: 100vh;
+                    width: 40%;
+                    background: #7a5555;
+                    top: 0;
+                    left: -100%;
+                    padding: 1.5rem;
+                    min-width: 325px;
+                    z-index: 5;
+
+                    .mobile-logo-close {
+                        @include flex-center-v;
+                        justify-content: space-between;
+                    }
+
+                    ul {
+                        @include flex-col;
+                        width: 100%;
+                        height: 100%;
+                        align-items: flex-start;
+                        margin-top: 3rem;
+                        gap: 2rem;
+
+                        li {
+                            width: 100%;
+
+                            a {
+                                display: flex;
+                                justify-content: space-between;
+                                width: 100%;
+                                align-items: center;
+                            }
+                        }
+                    }
+                }
+
+                &>div {
+                    .menu-icon {
+                        display: block;
+                        font-size: 25px;
+                        color: $primary;
+                        padding: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    header>div .hide-btn {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .site-width {
+        padding-left: 20px;
+        padding-right: 20px;
+
+    }
+
+    header {
+        &>div {
+            div:nth-child(1) {
+                flex: 1;
+
+                .logo img {
+                    width: 100%;
+                }
+            }
+
+            div:nth-child(2) {
+                flex: 2;
+                justify-content: flex-end;
+            }
+        }
+    }
+}
