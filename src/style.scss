@@ -187,7 +187,7 @@ header {
 
                 &>div {
                     .menu-icon {
-                        display: block;
+                        @include flex-center;
                         font-size: 25px;
                         color: $primary;
                         padding: 12px;
@@ -208,7 +208,6 @@ header {
     .site-width {
         padding-left: 20px;
         padding-right: 20px;
-
     }
 
     header {
@@ -226,5 +225,12 @@ header {
                 justify-content: flex-end;
             }
         }
+    }
+
+    .btn{
+        padding: 8px 15px;
+    }
+    .menu-icon{
+        padding: 9px!important;
     }
 }
