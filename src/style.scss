@@ -175,7 +175,7 @@ h2 {
 header {
     box-shadow: 0 8px 24px 0 #959DA51A;
     position: relative;
-    z-index: 2;
+    z-index: 4;
 
     &>div {
         @include flex-center-v;
