@@ -13,9 +13,10 @@ export function Buttons({
     children,
     icon = "",
     position = "before",
-    variant,
+    variant = "",
     type = "button",
     path = "/",
+    onClick,
     className = ""
 }) {
 
@@ -30,7 +31,6 @@ export function Buttons({
             {position === "after" && <img src={icon} alt={`${iconName} icon`} />}
         </>
     )
-    console.log(type, path);
     return (
         <>
             {
@@ -41,6 +41,7 @@ export function Buttons({
                     <button
                         className={`btn ${variant} ${className}`}
                         type={type}
+                        onClick={onClick}
                     >
                         {content}
                     </button>
