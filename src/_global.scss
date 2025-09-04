@@ -1,3 +1,11 @@
+@mixin texts($weight, $size, $lheight, $align:center, $lspace: 0) {
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $lheight;
+    text-align: $align;
+    letter-spacing: $lspace;
+}
+
 @mixin flex-center {
     display: flex;
     justify-content: center;
@@ -45,10 +53,10 @@
     $family: "Exo 2",
     $fsize: 13px,
     $border: none,
-    $radius:10px,
-    $pad:6px,
+    $radius: 10px,
+    $pad: 6px,
     $lheight: 100%,
-    $lspace:0 ) {
+    $lspace: 0) {
     color: $color;
     background: $bg;
     font-family: $family;
