@@ -48,6 +48,9 @@ $text10: #54595F;
 $text11: #7A7A7A;
 $text12: #4D4D4D;
 $text13: #002A06;
+$text14: #121212;
+$text15: #161616;
+$text16: #6C6C6C;
 $bg2: #FFF7F8;
 $bg3: #FFDCD4;
 $bg4: #BCBCBC;
@@ -58,6 +61,7 @@ $bg8: #F0F4FD;
 $bg9: #ffffce;
 $bg10: #eceaff;
 $bg11: #ffe9fe;
+$bg12: #FFEEFE;
 
 
 .btn {
@@ -1373,6 +1377,94 @@ footer {
 
 // footer ends
 
+// Popup start
+.popup-container {
+    @include position(fixed, auto, auto, 20px, 50%);
+    // transform: translateX(-50%);
+    transform: translate(-50%, 120%);
+    box-shadow: 6px 13px 100px 3px #110C2E2E;
+    background: $light;
+    border-radius: 12px;
+    padding: 18px;
+    width: max-content;
+    z-index: 9999;
+    opacity: 0;
+
+    .row:first-child {
+        background: $bg12;
+        border-radius: 12px;
+        padding: 18px;
+        @include flex-center-v;
+        margin-bottom: 25px;
+
+        span:first-child {
+            width: 70px;
+            height: 45px;
+            @include flex-center-v;
+        }
+
+        h4 {
+            font-family: "Poppins", Sans-serif;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 100%;
+            letter-spacing: 0;
+            // text-align: center;
+            color: $text14;
+            margin-right: 24px;
+            margin-left: 10px;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .btn {
+            margin-left: auto;
+        }
+    }
+
+    .row:last-child {
+        @include flex-center-h;
+        gap: 90px;
+
+        span {
+            font-family: "Poppins", Sans-serif;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 23.74px;
+            letter-spacing: 0;
+            color: $text16;
+            @include flex-center-v;
+            gap: 8px;
+
+            img {
+                width: 30px;
+                height: 30px;
+            }
+
+            em {
+                font-weight: 600;
+                font-style: normal;
+                color: $text15;
+            }
+        }
+    }
+
+    &.slide-top {
+        -webkit-animation: slide-top 0.8s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+        animation: slide-top 0.8s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+    }
+
+    &.slide-down {
+        -webkit-animation: slide-down 0.8s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+        animation: slide-down 0.8s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+    }
+}
+
+
+// Popup ends
+
 // Swiper.js start
 .swiper {
     width: 100%;
@@ -1619,6 +1711,10 @@ footer {
             }
         }
     }
+
+    .popup-container {
+        display: none;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1729,6 +1825,15 @@ footer {
         }
     }
 
+    .banner>div.site-width div.crm-box>div {
+        gap: 10px;
+
+        img {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
     .btn {
         padding: 8px 15px;
     }
@@ -1821,5 +1926,33 @@ footer {
 @keyframes scroll-animation {
     to {
         transform: translateX(calc(-100% - var(--gap)));
+    }
+}
+
+@keyframes slide-top {
+    0% {
+        -webkit-transform: translate(-50%, 120%);
+        transform: translate(-50%, 120%);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translate(-50%, 0);
+        transform: translate(-50%, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-down {
+    0% {
+        -webkit-transform: translate(-50%, 0);
+        transform: translate(-50%, 0);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: translate(-50%, 120%);
+        transform: translate(-50%, 120%);
+        opacity: 0;
     }
 }

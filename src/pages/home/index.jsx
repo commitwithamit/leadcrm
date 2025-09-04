@@ -1,4 +1,5 @@
 import { SmoothCarousel } from "../../components";
+import Popup from "../../components/Popup";
 import Banner from "./Banner";
 import Challenges from "./Challenges";
 import CRMSupport from "./CRMSupport";
@@ -18,6 +19,7 @@ export function Home() {
         <TabComponent/>
         <CRMSupport/>
         <Cta/>
+        <Popup/>
     </>
   )
 }
