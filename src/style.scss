@@ -397,15 +397,17 @@ header {
         overflow: hidden;
         user-select: none;
         display: flex;
-        --gap: 20px;
+        --gap: 60px;
         gap: var(--gap);
         margin-bottom: 56px;
 
         ul {
-            @include flex-center-h;
-            gap: 60px;
+            display: flex;
+            justify-content: space-around;
+            gap: var(--gap);
             flex-shrink: 0;
-            animation: scroll-animation 40s linear infinite;
+            animation: scroll-animation 35s linear infinite;
+            min-width: 100%;
 
             li {
                 @include flex-center-v;

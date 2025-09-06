@@ -46,6 +46,7 @@ export default function Testimonials() {
           modules={[Autoplay, Navigation]}
           className="mySwiper"
         >
+          {/* each slide content to be wraped inside SwiperSlide */}
           <SwiperSlide>
             <p>
               “Reliable Data Sync I’ve only had to refresh the extension a couple of times. The multi-contact enrichment is still a huge plus, and support is very responsive.“

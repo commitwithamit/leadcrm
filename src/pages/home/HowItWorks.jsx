@@ -18,7 +18,7 @@ export default function HowItWorks() {
               <h4>Install the Extension</h4>
               <p>Add LeadCRM to Chrome and connect your CRM in 2 minutes—secure and seamless.</p>
             </div>
-            <img src={extension} alt="" />
+            <img src={extension} alt="install the extension" />
           </div>
           <div className="card">
             <div>
@@ -26,7 +26,7 @@ export default function HowItWorks() {
               <h4>Browse LinkedIn</h4>
               <p>Use LinkedIn normally, our extension auto-captures data and reveals CRM contacts instantly.</p>
             </div>
-            <img src={linkedin} alt="" />
+            <img src={linkedin} alt="browse linkedin" />
           </div>
           <div className="card">
             <div>
@@ -34,7 +34,7 @@ export default function HowItWorks() {
               <h4>Get Enriched Data</h4>
               <p>Enrich profiles with verified emails, phones, and company data with 95%+ accuracy guaranteed.</p>
             </div>
-            <img src={getData} alt="" />
+            <img src={getData} alt="get enriched data" />
           </div>
           <div className="card">
             <div>
@@ -42,7 +42,7 @@ export default function HowItWorks() {
               <h4>Sync to CRM Instantly</h4>
               <p>Prospect data syncs to your CRM instantly with history, tracking, and AI powered insights for better follow  ups.</p>
             </div>
-            <img src={syncCRM} alt="" />
+            <img src={syncCRM} alt="sync to crm instantly" />
           </div>
         </div>
 

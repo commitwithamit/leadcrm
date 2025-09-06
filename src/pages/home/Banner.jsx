@@ -32,6 +32,7 @@ export default function Banner() {
                         <img src={salesforce} alt="salesforce" />
                     </div>
                 </div>
+                {/* Chrome and capterra ratings */}
                 <div className="ratings">
                     <div>
                         <span><img src={chromeWeb} alt="chrome logo" /></span>
