@@ -1256,6 +1256,17 @@ footer {
 
 // footer ends
 
+// page not found 404 start
+.pagenotfound{
+    @include flex-center;
+    flex-direction: column;
+    img{
+        max-width: 450px;
+        margin-bottom: 1rem;
+    }
+}
+// page not found 404 end
+
 // Popup start
 .popup-container {
     @include position(fixed, auto, auto, 20px, 50%);
@@ -1334,8 +1345,6 @@ footer {
         animation: slide-down 0.8s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
     }
 }
-
-
 // Popup ends
 
 // Swiper.js start
